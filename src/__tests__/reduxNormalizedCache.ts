@@ -1,4 +1,4 @@
-import { ReduxNormalizedCache, ReduxNormalizedCacheConfig } from '../reduxNormalizedCache';
+import { ReduxNormalizedCache } from '../reduxNormalizedCache';
 import { NormalizedCacheObject } from 'apollo-cache-inmemory';
 import { apolloReducer } from "../reducer";
 import { combineReducers, createStore } from "redux";

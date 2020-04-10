@@ -3,7 +3,7 @@ import gql, { disableFragmentWarnings } from 'graphql-tag';
 import { combineReducers, createStore } from 'redux';
 
 import { ReduxCache } from '..';
-import { ApolloReducerConfig, NormalizedCache } from 'apollo-cache-inmemory';
+import { ApolloReducerConfig, NormalizedCacheObject } from 'apollo-cache-inmemory';
 import { apolloReducer } from '../reducer';
 
 disableFragmentWarnings();
@@ -15,7 +15,7 @@ describe('Cache', () => {
   }: {
     initialState?: any;
     config?: ApolloReducerConfig;
-  } = {}): ApolloCache<NormalizedCache> {
+  } = {}): ApolloCache<NormalizedCacheObject> {
     const store = createStore(
       combineReducers({
         apollo: apolloReducer
@@ -1190,7 +1190,7 @@ describe('Cache', () => {
         });
 
         expect(numBroadcasts).toEqual(0);
-      }, 1);
+      }, "1");
 
       expect(numBroadcasts).toEqual(1);
     });

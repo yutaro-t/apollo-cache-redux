@@ -12,6 +12,7 @@ import {
     Store
 } from "redux";
 
+
 export interface ReduxNormalizedCacheConfig {
     reduxRootSelector?: string
     store: Store<any>
